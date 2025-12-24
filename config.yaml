@@ -1,7 +1,7 @@
 data:
-  name: MVTec  #MVTec #MTD #VisA 
-  data_dir: /kaggle/input/KKK  # MVTec / VisA / MTD
-  category: 01Gorilla # ['carpet', 'bottle', 'hazelnut', ...]
+  name: MVTec
+  data_dir: /kaggle/input/KKK
+  category: 01Gorilla
   image_size: 256
   batch_size: 2
   DA_batch_size: 1
@@ -11,7 +11,7 @@ data:
 
 model:
   DDADS: True
-  checkpoint_dir: /kaggle/input/KKK/checkpoints   # MTD / MVTec / VisA
+  checkpoint_dir: /kaggle/working/KKK/checkpoints   # ✅ 改這一行
   checkpoint_name: weights
   exp_name: default
   feature_extractor: wide_resnet101_2
