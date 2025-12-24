@@ -1,0 +1,9 @@
+class,backbone,support,image_auroc,pixel_auroc,pro
+can,ViT-L-14,20,0.591820987654321,,
+fabric,ViT-L-14,20,0.3395622895622895,,
+fruit_jelly,ViT-L-14,20,0.62,,
+rice,ViT-L-14,20,0.6714285714285714,,
+sheet_metal,ViT-L-14,20,0.6194444444444446,,
+vial,ViT-L-14,20,0.4508843537414966,,
+wallplugs,ViT-L-14,20,0.41740740740740734,,
+walnuts,ViT-L-14,20,0.6662962962962964,,

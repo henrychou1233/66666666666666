@@ -1,0 +1,230 @@
+# -*- coding: utf-8 -*-
+# anomaly_utils.py
+# ============================================================+
+# 熱圖計算（含 FID + WinCLIP 成分 + 成分值 logging）
+# ============================================================+
+
+import math
+import logging
+from typing import Optional, Tuple, Union
+
+import torch
+import torch.nn.functional as F
+from torchvision import transforms
+from kornia.filters import gaussian_blur2d
+from kornia.metrics import ssim as kornia_ssim
+from torchmetrics.image.fid import FrechetInceptionDistance
+import open_clip
+
+logging.basicConfig(level=logging.INFO, format="%(message)s")
+
+# -------------------- 可調參數 --------------------
+W_FD      = 1      # Feature distance
+W_L1      = 3      # Pixel L1 distance
+W_L2      = 3      # L2 distance
+W_SSIM    = 0.1    # SSIM difference
+W_FID     = 0.1    # FID score
+W_WINCLIP = 0    # WinCLIP 成分權重 (可調)
+
+GAUSS_SIG_DEFAULT = 4
+EPS = 1e-8
+
+# -------------------- WinCLIP 初始化 --------------------
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+BACKBONE = "ViT-L-14"
+PRETRAINED = "laion2b_s32b_b82k"
+
+clip_model, _, clip_preprocess = open_clip.create_model_and_transforms(
+    BACKBONE, pretrained=PRETRAINED
+)
+clip_model = clip_model.to(DEVICE).eval()
+
+STATE_WORDS_NORMAL = ["flawless", "intact", "perfect", "clean", "good"]
+STATE_WORDS_ANOM = ["broken", "cracked", "damaged", "scratched", "defective", "faulty"]
+TEMPLATES = [
+    "a photo of a {}",
+    "a cropped photo of a {}",
+    "a photo of a {} for visual inspection"
+]
+
+def build_cpe_prompts(cls_name):
+    normal_prompts = [t.format(w + " " + cls_name) for w in STATE_WORDS_NORMAL for t in TEMPLATES]
+    anomaly_prompts = [t.format(w + " " + cls_name) for w in STATE_WORDS_ANOM for t in TEMPLATES]
+    return normal_prompts, anomaly_prompts
+
+def compute_winclip_score(img_tensor, cls_name="object"):
+    """
+    計算單張圖的 WinCLIP 異常分數
+    保證 >= 0，越大越異常
+    """
+    to_pil = transforms.ToPILImage()
+    img_pil = to_pil((img_tensor[0] + 1) / 2).convert("RGB").resize((256, 256))
+    img_proc = clip_preprocess(img_pil).unsqueeze(0).to(DEVICE)
+
+    with torch.no_grad():
+        img_emb = clip_model.encode_image(img_proc)
+        img_emb = img_emb / img_emb.norm(dim=-1, keepdim=True)
+
+        normal_prompts, anomaly_prompts = build_cpe_prompts(cls_name)
+        txt_norm = clip_model.encode_text(open_clip.tokenize(normal_prompts).to(DEVICE))
+        txt_anom = clip_model.encode_text(open_clip.tokenize(anomaly_prompts).to(DEVICE))
+        txt_norm = txt_norm / txt_norm.norm(dim=-1, keepdim=True)
+        txt_anom = txt_anom / txt_anom.norm(dim=-1, keepdim=True)
+
+        sim_norm = (img_emb @ txt_norm.T).max().item()
+        sim_anom = (img_emb @ txt_anom.T).max().item()
+
+    return max(0.0, sim_anom - sim_norm)  # 🔹 永遠非負，越大越異常
+
+# -------------------- Normalize --------------------
+def _make_normalize_transform(device: torch.device):
+    mean = torch.tensor([0.485, 0.456, 0.406], device=device, dtype=torch.float32)
+    std  = torch.tensor([0.229, 0.224, 0.225], device=device, dtype=torch.float32)
+    def _transform(x: torch.Tensor) -> torch.Tensor:
+        x = (x + 1.0) / 2.0
+        mean_b = mean.view(1, -1, 1, 1)
+        std_b  = std.view(1, -1, 1, 1)
+        return (x - mean_b) / (std_b + 1e-12)
+    return _transform
+
+def _compute_kernel_size_for_sigma(sigma: float) -> int:
+    k = max(3, 2 * int(4 * sigma + 0.5) + 1)
+    if k % 2 == 0:
+        k += 1
+    return k
+
+# -------------------- heat_map --------------------
+# -------------------- heat_map --------------------
+def heat_map(
+    output: torch.Tensor,
+    target: torch.Tensor,
+    FE: torch.nn.Module,
+    config,
+    *,
+    return_fid: bool = False,
+    fid_metric: Optional[FrechetInceptionDistance] = None,
+    normalize_feats: bool = True,
+    gauss_sigma: Optional[float] = None,
+) -> Union[torch.Tensor, Tuple[torch.Tensor, float]]:
+    device = torch.device(getattr(config.model, "device", "cpu"))
+    gauss_sigma = GAUSS_SIG_DEFAULT if gauss_sigma is None else float(gauss_sigma)
+    kernel_size = _compute_kernel_size_for_sigma(gauss_sigma)
+
+    output = output.to(device)
+    target = target.to(device)
+
+    # Pixel distances
+    l1_d = torch.mean(torch.abs(output - target), dim=1, keepdim=True)
+    l2_d = torch.mean((output - target) ** 2, dim=1, keepdim=True)
+
+    # Feature distance
+    f_d = feature_distance(output, target, FE, config, normalize=normalize_feats).to(device)
+
+    # SSIM
+    output_norm = (output + 1.0) / 2.0
+    target_norm = (target + 1.0) / 2.0
+    try:
+        ssim_map = kornia_ssim(output_norm, target_norm, window_size=11)
+        ssim_diff = 1.0 - ssim_map.mean(dim=1, keepdim=True)
+    except Exception:
+        ssim_diff = l1_d.clone()
+
+    # FID
+    fid_score = None
+    fid_map = torch.zeros_like(l1_d, device=device)
+    if return_fid:
+        if fid_metric is None:
+            fid_metric = FrechetInceptionDistance(feature=2048, normalize=True).to(device)
+            _fid_owned = True
+        else:
+            _fid_owned = False
+            fid_metric = fid_metric.to(device)
+        with torch.no_grad():
+            fid_metric.update(target_norm.detach(), real=True)
+            fid_metric.update(output_norm.detach(), real=False)
+            fid_score_tensor = fid_metric.compute()
+            if _fid_owned:
+                try: fid_metric.reset()
+                except Exception: pass
+        fid_score = float(fid_score_tensor.detach().cpu().item())
+        fid_map = torch.full_like(l1_d, fill_value=fid_score, device=device)
+
+    # WinCLIP 成分
+    if W_WINCLIP > 0:
+        cls_name = getattr(config.data, "category", "object")
+        winclip_val = compute_winclip_score(output.detach().cpu(), cls_name)
+    else:
+        winclip_val = 0.0
+
+    # 🔹 融合異常分數
+    v_l1 = float(getattr(config.model, "v", 1.0))
+    anomaly_map = (
+        W_FD * f_d +
+        W_L1 * v_l1 * l1_d +
+        W_L2 * l2_d +
+        W_SSIM * ssim_diff +
+        W_FID * fid_map +
+        W_WINCLIP * torch.full_like(l1_d, winclip_val, device=device)
+    )
+
+    # Gaussian blur
+    anomaly_map = gaussian_blur2d(anomaly_map, (kernel_size, kernel_size), (gauss_sigma, gauss_sigma))
+    anomaly_map = torch.sum(anomaly_map, dim=1, keepdim=True)
+
+    # 🔹 最終成分檢查（只印融合後的各項權重 * 值）
+    msg = [f"[成分檢查]"]
+    if W_FD > 0: msg.append(f"FD*{W_FD}={ (W_FD * f_d.mean()).item():.4f}")
+    if W_L1 > 0: msg.append(f"L1*{W_L1}={ (W_L1 * v_l1 * l1_d.mean()).item():.4f}")
+    if W_L2 > 0: msg.append(f"L2*{W_L2}={ (W_L2 * l2_d.mean()).item():.4f}")
+    if W_SSIM > 0: msg.append(f"SSIM*{W_SSIM}={ (W_SSIM * ssim_diff.mean()).item():.4f}")
+    if W_FID > 0: msg.append(f"FID*{W_FID}={ (W_FID * fid_map.mean()).item():.4f}")
+    if W_WINCLIP > 0: msg.append(f"WinCLIP*{W_WINCLIP}={ (W_WINCLIP * winclip_val):.4f}")
+
+    logging.info(" | ".join(msg))
+
+    if return_fid: 
+        return anomaly_map, fid_score
+    return anomaly_map
+
+
+# -------------------- Feature Distance --------------------
+def feature_distance(output, target, FE, config, normalize=True):
+    device = torch.device(getattr(config.model, "device", "cpu"))
+    FE.to(device); FE.eval()
+
+    if normalize:
+        transform = _make_normalize_transform(device)
+        output_in, target_in = transform(output), transform(target)
+    else:
+        output_in, target_in = (output+1)/2, (target+1)/2
+
+    with torch.no_grad():
+        feats_out, feats_tgt = FE(output_in), FE(target_in)
+
+    if isinstance(feats_out, torch.Tensor): feats_out=[feats_out]
+    if isinstance(feats_tgt, torch.Tensor): feats_tgt=[feats_tgt]
+
+    out_size = int(getattr(config.data, "image_size", output.shape[-1]))
+    B = output.shape[0]
+    anomaly_map = torch.zeros((B,1,out_size,out_size), device=device, dtype=feats_out[0].dtype)
+
+    for i in range(len(feats_out)):
+        if i == 0: continue
+        f_o, f_t = feats_out[i], feats_tgt[i]
+        p_o, p_t = patchify(f_o), patchify(f_t)
+        cos = F.cosine_similarity(p_t, p_o, dim=1, eps=1e-6)
+        diff_map = (1.0-cos).unsqueeze(1)
+        diff_map = F.interpolate(diff_map, size=(out_size,out_size), mode='bilinear', align_corners=True)
+        anomaly_map += diff_map
+
+    return anomaly_map
+
+# -------------------- Patchify --------------------
+def patchify(features: torch.Tensor, patchsize: int = 3, stride: int = 1) -> torch.Tensor:
+    B, C, H, W = features.shape
+    pad = (patchsize-1)//2
+    uf = torch.nn.Unfold(kernel_size=patchsize, stride=stride, padding=pad)
+    patches = uf(features)
+    patches = patches.view(B, C, patchsize*patchsize, -1)
+    pooled = patches.mean(dim=2)
+    return pooled.view(B, C, H, W)

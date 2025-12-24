@@ -1,0 +1,39 @@
+# DDAD Anomaly Detection Report
+
+**Run At:** 2025-08-28 20:57:58  
+**Category:** macaroni2
+
+## ⚙️ Run Configuration
+- **Run At:** 2025-08-28 20:57:58
+- **Category:** macaroni2
+- **Algorithm:** lof
+- **Dynamic Weight (Mean):** 2.9318
+- **Load Checkpoint:** 30
+- **DA Checkpoint:** 3
+
+## 📊 Key Metrics
+- **Optimal Threshold:** 0.1651
+- **AUROC (Image):** 42.37%
+- **AP (Image):** 0.4423
+- **F1 Score (Image):** 0.6574
+
+## 픽셀 Pixel-Level Metrics
+- **Pixel-AUROC:** 93.16%
+- **Pixel-AP:** 0.0141
+- **Pixel-F1:** 0.0292
+- **PRO Score:** 84.10%
+- **Dice Coefficient:** 0.0292
+- **IoU (Jaccard):** 0.0148
+
+## 🚀 Performance
+- **Total Inference Time (s):** 22.30
+- **FPS (samples/sec):** 8.97
+- **Avg. Latency (ms/sample):** 111.49
+
+## 🧮 Image-Level Confusion Matrix
+```
+[[ 6, 94],
+ [ 5, 95]]
+```
+
+------------------------------------------------------------

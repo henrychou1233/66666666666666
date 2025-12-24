@@ -1,0 +1,1252 @@
+
+Run at                        : 2025-07-27 03:21:42
+Category                      : one
+Parameter w (dynamic)         : 3.2093
+Parameter v                   : 6
+Load checkpoint               : 100
+DA checkpoint                 : 0
+Test batch size               : 28
+Threshold                     : 0.2623
+Algorithm                     : lof
+AUROC                         : 95.14%
+Pixel-AUROC                   : 96.06%
+PRO                           : 73.27%
+AP-I                          : 0.9826
+AP-P                          : 0.6456
+F1 Score (image-level)        : 0.9348
+Confusion Matrix              : [[21  0]
+ [ 6 43]]
+Dice coefficient              : 0.5908
+IoU                           : 0.4193
+Precision (pixel-level)       : 0.7277
+Recall (pixel-level)          : 0.4973
+Pixel-level F1                : 0.5908
+PRO@0.05                      : 73.27%
+Total inference time (s)      : 25.40
+FPS                           : 2.76
+Average latency (ms/sample)   : 362.85
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 03:24:18
+Category                      : two
+Parameter w (dynamic)         : 3.1956
+Parameter v                   : 6
+Load checkpoint               : 100
+DA checkpoint                 : 0
+Test batch size               : 28
+Threshold                     : 0.4782
+Algorithm                     : lof
+AUROC                         : 67.58%
+Pixel-AUROC                   : 94.71%
+PRO                           : 60.87%
+AP-I                          : 0.9478
+AP-P                          : 0.6542
+F1 Score (image-level)        : 0.7256
+Confusion Matrix              : [[ 28   2]
+ [ 85 115]]
+Dice coefficient              : 0.6487
+IoU                           : 0.4801
+Precision (pixel-level)       : 0.6088
+Recall (pixel-level)          : 0.6942
+Pixel-level F1                : 0.6487
+PRO@0.05                      : 60.87%
+Total inference time (s)      : 73.85
+FPS                           : 3.11
+Average latency (ms/sample)   : 321.07
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 03:26:38
+Category                      : two
+Parameter w (dynamic)         : 1.0819
+Parameter v                   : 3
+Load checkpoint               : 100
+DA checkpoint                 : 0
+Test batch size               : 28
+Threshold                     : 0.3770
+Algorithm                     : lof
+AUROC                         : 80.58%
+Pixel-AUROC                   : 94.65%
+PRO                           : 55.66%
+AP-I                          : 0.9695
+AP-P                          : 0.5399
+F1 Score (image-level)        : 0.8300
+Confusion Matrix              : [[ 27   3]
+ [ 56 144]]
+Dice coefficient              : 0.5214
+IoU                           : 0.3527
+Precision (pixel-level)       : 0.3681
+Recall (pixel-level)          : 0.8938
+Pixel-level F1                : 0.5214
+PRO@0.05                      : 55.66%
+Total inference time (s)      : 74.17
+FPS                           : 3.10
+Average latency (ms/sample)   : 322.49
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 03:30:26
+Category                      : three
+Parameter w (dynamic)         : 1.1000
+Parameter v                   : 3
+Load checkpoint               : 100
+DA checkpoint                 : 0
+Test batch size               : 28
+Threshold                     : 0.2239
+Algorithm                     : lof
+AUROC                         : 93.43%
+Pixel-AUROC                   : 98.55%
+PRO                           : 94.47%
+AP-I                          : 0.6554
+AP-P                          : 0.2854
+F1 Score (image-level)        : 0.4881
+Confusion Matrix              : [[314  86]
+ [  0  41]]
+Dice coefficient              : 0.3039
+IoU                           : 0.1791
+Precision (pixel-level)       : 0.1999
+Recall (pixel-level)          : 0.6333
+Pixel-level F1                : 0.3039
+PRO@0.05                      : 94.47%
+Total inference time (s)      : 134.07
+FPS                           : 3.29
+Average latency (ms/sample)   : 304.02
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 03:42:21
+Category                      : one
+Parameter w (dynamic)         : 3.2093
+Parameter v                   : 3
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.2464
+Algorithm                     : lof
+AUROC                         : 87.37%
+Pixel-AUROC                   : 92.94%
+PRO                           : 59.70%
+AP-I                          : 0.9553
+AP-P                          : 0.3867
+F1 Score (image-level)        : 0.8889
+Confusion Matrix              : [[20  1]
+ [ 9 40]]
+Dice coefficient              : 0.2630
+IoU                           : 0.1514
+Precision (pixel-level)       : 0.6535
+Recall (pixel-level)          : 0.1646
+Pixel-level F1                : 0.2630
+PRO@0.05                      : 59.70%
+Total inference time (s)      : 92.85
+FPS                           : 0.75
+Average latency (ms/sample)   : 1326.40
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 03:54:27
+Category                      : two
+Parameter w (dynamic)         : 3.1956
+Parameter v                   : 3
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.2925
+Algorithm                     : lof
+AUROC                         : 79.75%
+Pixel-AUROC                   : 95.77%
+PRO                           : 62.51%
+AP-I                          : 0.9686
+AP-P                          : 0.6927
+F1 Score (image-level)        : 0.7964
+Confusion Matrix              : [[ 29   1]
+ [ 67 133]]
+Dice coefficient              : 0.5620
+IoU                           : 0.3908
+Precision (pixel-level)       : 0.4133
+Recall (pixel-level)          : 0.8780
+Pixel-level F1                : 0.5620
+PRO@0.05                      : 62.51%
+Total inference time (s)      : 340.74
+FPS                           : 0.67
+Average latency (ms/sample)   : 1481.50
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:17:27
+Category                      : three
+Parameter w (dynamic)         : 3.2661
+Parameter v                   : 3
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.1673
+Algorithm                     : lof
+AUROC                         : 96.86%
+Pixel-AUROC                   : 98.47%
+PRO                           : 93.98%
+AP-I                          : 0.8729
+AP-P                          : 0.3039
+F1 Score (image-level)        : 0.6857
+Confusion Matrix              : [[372  28]
+ [  5  36]]
+Dice coefficient              : 0.3466
+IoU                           : 0.2096
+Precision (pixel-level)       : 0.3509
+Recall (pixel-level)          : 0.3424
+Pixel-level F1                : 0.3466
+PRO@0.05                      : 93.98%
+Total inference time (s)      : 653.44
+FPS                           : 0.67
+Average latency (ms/sample)   : 1481.73
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:22:44
+Category                      : three
+Parameter w (dynamic)         : 3.0000
+Parameter v                   : 3
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.1533
+Algorithm                     : lof
+AUROC                         : 95.95%
+Pixel-AUROC                   : 98.89%
+PRO                           : 95.76%
+AP-I                          : 0.8664
+AP-P                          : 0.3205
+F1 Score (image-level)        : 0.8333
+Confusion Matrix              : [[392   8]
+ [  6  35]]
+Dice coefficient              : 0.3115
+IoU                           : 0.1845
+Precision (pixel-level)       : 0.4148
+Recall (pixel-level)          : 0.2494
+Pixel-level F1                : 0.3115
+PRO@0.05                      : 95.76%
+Total inference time (s)      : 133.20
+FPS                           : 3.31
+Average latency (ms/sample)   : 302.04
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:24:43
+Category                      : one
+Parameter w (dynamic)         : 3.0000
+Parameter v                   : 3
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.2092
+Algorithm                     : lof
+AUROC                         : 87.37%
+Pixel-AUROC                   : 92.69%
+PRO                           : 60.36%
+AP-I                          : 0.9532
+AP-P                          : 0.3607
+F1 Score (image-level)        : 0.8471
+Confusion Matrix              : [[21  0]
+ [13 36]]
+Dice coefficient              : 0.2243
+IoU                           : 0.1263
+Precision (pixel-level)       : 0.6587
+Recall (pixel-level)          : 0.1352
+Pixel-level F1                : 0.2243
+PRO@0.05                      : 60.36%
+Total inference time (s)      : 25.47
+FPS                           : 2.75
+Average latency (ms/sample)   : 363.79
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:26:20
+Category                      : one
+Parameter w (dynamic)         : 3.0000
+Parameter v                   : 6
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.2241
+Algorithm                     : lof
+AUROC                         : 93.10%
+Pixel-AUROC                   : 96.34%
+PRO                           : 75.29%
+AP-I                          : 0.9759
+AP-P                          : 0.6538
+F1 Score (image-level)        : 0.9348
+Confusion Matrix              : [[21  0]
+ [ 6 43]]
+Dice coefficient              : 0.6013
+IoU                           : 0.4299
+Precision (pixel-level)       : 0.6973
+Recall (pixel-level)          : 0.5285
+Pixel-level F1                : 0.6013
+PRO@0.05                      : 75.29%
+Total inference time (s)      : 24.65
+FPS                           : 2.84
+Average latency (ms/sample)   : 352.13
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:28:51
+Category                      : two
+Parameter w (dynamic)         : 3.0000
+Parameter v                   : 6
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.4259
+Algorithm                     : lof
+AUROC                         : 68.87%
+Pixel-AUROC                   : 94.71%
+PRO                           : 59.21%
+AP-I                          : 0.9501
+AP-P                          : 0.6386
+F1 Score (image-level)        : 0.7296
+Confusion Matrix              : [[ 28   2]
+ [ 84 116]]
+Dice coefficient              : 0.6404
+IoU                           : 0.4710
+Precision (pixel-level)       : 0.5730
+Recall (pixel-level)          : 0.7258
+Pixel-level F1                : 0.6404
+PRO@0.05                      : 59.21%
+Total inference time (s)      : 73.02
+FPS                           : 3.15
+Average latency (ms/sample)   : 317.47
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:31:14
+Category                      : two
+Parameter w (dynamic)         : 1.0000
+Parameter v                   : 3
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.3183
+Algorithm                     : lof
+AUROC                         : 84.47%
+Pixel-AUROC                   : 94.66%
+PRO                           : 56.67%
+AP-I                          : 0.9751
+AP-P                          : 0.5334
+F1 Score (image-level)        : 0.8222
+Confusion Matrix              : [[ 28   2]
+ [ 59 141]]
+Dice coefficient              : 0.5106
+IoU                           : 0.3428
+Precision (pixel-level)       : 0.3559
+Recall (pixel-level)          : 0.9030
+Pixel-level F1                : 0.5106
+PRO@0.05                      : 56.67%
+Total inference time (s)      : 72.16
+FPS                           : 3.19
+Average latency (ms/sample)   : 313.76
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:33:59
+Category                      : two
+Parameter w (dynamic)         : 1.0000
+Parameter v                   : 1
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.2525
+Algorithm                     : lof
+AUROC                         : 83.83%
+Pixel-AUROC                   : 95.20%
+PRO                           : 57.31%
+AP-I                          : 0.9741
+AP-P                          : 0.5846
+F1 Score (image-level)        : 0.8071
+Confusion Matrix              : [[ 29   1]
+ [ 64 136]]
+Dice coefficient              : 0.4529
+IoU                           : 0.2928
+Precision (pixel-level)       : 0.2974
+Recall (pixel-level)          : 0.9493
+Pixel-level F1                : 0.4529
+PRO@0.05                      : 57.31%
+Total inference time (s)      : 70.93
+FPS                           : 3.24
+Average latency (ms/sample)   : 308.38
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:36:11
+Category                      : two
+Parameter w (dynamic)         : 0.1000
+Parameter v                   : 1
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.2829
+Algorithm                     : lof
+AUROC                         : 95.72%
+Pixel-AUROC                   : 92.31%
+PRO                           : 50.82%
+AP-I                          : 0.9932
+AP-P                          : 0.4275
+F1 Score (image-level)        : 0.9479
+Confusion Matrix              : [[ 28   2]
+ [ 18 182]]
+Dice coefficient              : 0.2981
+IoU                           : 0.1751
+Precision (pixel-level)       : 0.1763
+Recall (pixel-level)          : 0.9631
+Pixel-level F1                : 0.2981
+PRO@0.05                      : 50.82%
+Total inference time (s)      : 71.67
+FPS                           : 3.21
+Average latency (ms/sample)   : 311.61
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:38:33
+Category                      : one
+Parameter w (dynamic)         : 3.0000
+Parameter v                   : 3
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.2422
+Algorithm                     : lof
+AUROC                         : 88.92%
+Pixel-AUROC                   : 92.74%
+PRO                           : 59.25%
+AP-I                          : 0.9595
+AP-P                          : 0.3928
+F1 Score (image-level)        : 0.8605
+Confusion Matrix              : [[21  0]
+ [12 37]]
+Dice coefficient              : 0.2770
+IoU                           : 0.1608
+Precision (pixel-level)       : 0.6675
+Recall (pixel-level)          : 0.1748
+Pixel-level F1                : 0.2770
+PRO@0.05                      : 59.25%
+Total inference time (s)      : 25.53
+FPS                           : 2.74
+Average latency (ms/sample)   : 364.72
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:39:29
+Category                      : one
+Parameter w (dynamic)         : 3.0000
+Parameter v                   : 8
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.2948
+Algorithm                     : lof
+AUROC                         : 97.38%
+Pixel-AUROC                   : 97.09%
+PRO                           : 78.19%
+AP-I                          : 0.9915
+AP-P                          : 0.7087
+F1 Score (image-level)        : 0.9684
+Confusion Matrix              : [[21  0]
+ [ 3 46]]
+Dice coefficient              : 0.6620
+IoU                           : 0.4948
+Precision (pixel-level)       : 0.6887
+Recall (pixel-level)          : 0.6373
+Pixel-level F1                : 0.6620
+PRO@0.05                      : 78.19%
+Total inference time (s)      : 25.53
+FPS                           : 2.74
+Average latency (ms/sample)   : 364.76
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:43:18
+Category                      : three
+Parameter w (dynamic)         : 3.0000
+Parameter v                   : 8
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.2935
+Algorithm                     : lof
+AUROC                         : 99.71%
+Pixel-AUROC                   : 98.24%
+PRO                           : 94.36%
+AP-I                          : 0.9670
+AP-P                          : 0.2082
+F1 Score (image-level)        : 0.9011
+Confusion Matrix              : [[391   9]
+ [  0  41]]
+Dice coefficient              : 0.2487
+IoU                           : 0.1420
+Precision (pixel-level)       : 0.2689
+Recall (pixel-level)          : 0.2313
+Pixel-level F1                : 0.2487
+PRO@0.05                      : 94.36%
+Total inference time (s)      : 133.12
+FPS                           : 3.31
+Average latency (ms/sample)   : 301.85
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:48:35
+Category                      : three
+Parameter w (dynamic)         : 3.5084
+Parameter v                   : 8
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.2580
+Algorithm                     : lof
+AUROC                         : 99.70%
+Pixel-AUROC                   : 97.50%
+PRO                           : 92.12%
+AP-I                          : 0.9654
+AP-P                          : 0.1710
+F1 Score (image-level)        : 0.8723
+Confusion Matrix              : [[388  12]
+ [  0  41]]
+Dice coefficient              : 0.2097
+IoU                           : 0.1171
+Precision (pixel-level)       : 0.2564
+Recall (pixel-level)          : 0.1773
+Pixel-level F1                : 0.2097
+PRO@0.05                      : 92.12%
+Total inference time (s)      : 134.08
+FPS                           : 3.29
+Average latency (ms/sample)   : 304.04
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 04:54:30
+Category                      : three
+Parameter w (mean/min/max)    : 2.3388 / 1.2000 / 3.5324
+Parameter v                   : 8
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.3703
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.6
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.469529 / 0.052410
+AUROC                         : 99.44%
+Pixel-AUROC                   : 98.44%
+PRO                           : 93.96%
+AP-I                          : 0.9419
+AP-P                          : 0.2133
+F1 Score (image-level)        : 0.8913
+Confusion Matrix              : [[390  10]
+ [  0  41]]
+Dice coefficient              : 0.2821
+IoU                           : 0.1642
+Precision (pixel-level)       : 0.2653
+Recall (pixel-level)          : 0.3011
+Pixel-level F1                : 0.2821
+PRO@0.05                      : 93.96%
+Total inference time (s)      : 133.63
+FPS                           : 3.30
+Average latency (ms/sample)   : 303.00
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 05:00:39
+Category                      : three
+Parameter w (mean/min/max)    : 2.3388 / 1.2000 / 3.5324
+Parameter v                   : 10
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 4.1402
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.6
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.469529 / 0.052410
+AUROC                         : 98.65%
+Pixel-AUROC                   : 97.14%
+PRO                           : 90.21%
+AP-I                          : 0.9079
+AP-P                          : 0.1540
+F1 Score (image-level)        : 0.8172
+Confusion Matrix              : [[386  14]
+ [  3  38]]
+Dice coefficient              : 0.1200
+IoU                           : 0.0638
+Precision (pixel-level)       : 0.2846
+Recall (pixel-level)          : 0.0761
+Pixel-level F1                : 0.1200
+PRO@0.05                      : 90.21%
+Total inference time (s)      : 92.33
+FPS                           : 4.78
+Average latency (ms/sample)   : 209.37
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 05:03:58
+Category                      : three
+Parameter w (mean/min/max)    : 2.8888 / 2.7000 / 3.3000
+Parameter v                   : 8
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 2.1491
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.1
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.469529 / 0.052410
+AUROC                         : 98.92%
+Pixel-AUROC                   : 94.15%
+PRO                           : 85.11%
+AP-I                          : 0.8660
+AP-P                          : 0.1054
+F1 Score (image-level)        : 0.7885
+Confusion Matrix              : [[378  22]
+ [  0  41]]
+Dice coefficient              : 0.1301
+IoU                           : 0.0696
+Precision (pixel-level)       : 0.1923
+Recall (pixel-level)          : 0.0983
+Pixel-level F1                : 0.1301
+PRO@0.05                      : 85.11%
+Total inference time (s)      : 93.10
+FPS                           : 4.74
+Average latency (ms/sample)   : 211.12
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 05:09:53
+Category                      : one
+Parameter w (mean/min/max)    : 2.1379 / 1.5000 / 3.2481
+Parameter v                   : 8
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 3.3384
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.446822 / 0.087420
+AUROC                         : 98.64%
+Pixel-AUROC                   : 97.69%
+PRO                           : 82.32%
+AP-I                          : 0.9955
+AP-P                          : 0.7238
+F1 Score (image-level)        : 0.9897
+Confusion Matrix              : [[21  0]
+ [ 1 48]]
+Dice coefficient              : 0.4565
+IoU                           : 0.2958
+Precision (pixel-level)       : 0.3027
+Recall (pixel-level)          : 0.9288
+Pixel-level F1                : 0.4565
+PRO@0.05                      : 82.32%
+Total inference time (s)      : 15.75
+FPS                           : 4.44
+Average latency (ms/sample)   : 225.05
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 05:12:44
+Category                      : two
+Parameter w (mean/min/max)    : 2.4279 / 1.5000 / 3.2684
+Parameter v                   : 8
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 1.4588
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.455339 / 0.089084
+AUROC                         : 83.15%
+Pixel-AUROC                   : 94.09%
+PRO                           : 53.92%
+AP-I                          : 0.9728
+AP-P                          : 0.5178
+F1 Score (image-level)        : 0.8343
+Confusion Matrix              : [[ 26   4]
+ [ 54 146]]
+Dice coefficient              : 0.5078
+IoU                           : 0.3403
+Precision (pixel-level)       : 0.3556
+Recall (pixel-level)          : 0.8879
+Pixel-level F1                : 0.5078
+PRO@0.05                      : 53.92%
+Total inference time (s)      : 51.06
+FPS                           : 4.50
+Average latency (ms/sample)   : 221.98
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 05:15:07
+Category                      : two
+Parameter w (mean/min/max)    : 0.0861 / 0.0500 / 0.1500
+Parameter v                   : 1
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 0.7315
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.455339 / 0.089084
+AUROC                         : 89.78%
+Pixel-AUROC                   : 91.17%
+PRO                           : 49.08%
+AP-I                          : 0.9842
+AP-P                          : 0.3801
+F1 Score (image-level)        : 0.8771
+Confusion Matrix              : [[ 29   1]
+ [ 43 157]]
+Dice coefficient              : 0.2863
+IoU                           : 0.1671
+Precision (pixel-level)       : 0.1682
+Recall (pixel-level)          : 0.9603
+Pixel-level F1                : 0.2863
+PRO@0.05                      : 49.08%
+Total inference time (s)      : 50.78
+FPS                           : 4.53
+Average latency (ms/sample)   : 220.78
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 05:19:34
+Category                      : three
+Parameter w (mean/min/max)    : 3.4227 / 2.0000 / 4.3476
+Parameter v                   : 6
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 1.9960
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.456844 / 0.066411
+AUROC                         : 98.93%
+Pixel-AUROC                   : 97.66%
+PRO                           : 92.43%
+AP-I                          : 0.9370
+AP-P                          : 0.1610
+F1 Score (image-level)        : 0.8764
+Confusion Matrix              : [[391   9]
+ [  2  39]]
+Dice coefficient              : 0.1341
+IoU                           : 0.0719
+Precision (pixel-level)       : 0.2662
+Recall (pixel-level)          : 0.0897
+Pixel-level F1                : 0.1341
+PRO@0.05                      : 92.43%
+Total inference time (s)      : 92.15
+FPS                           : 4.79
+Average latency (ms/sample)   : 208.96
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 05:40:06
+Category                      : three
+Parameter w (mean/min/max)    : 3.4227 / 2.0000 / 4.3476
+Parameter v                   : 6
+Load checkpoint               : 30
+DA checkpoint                 : 1
+Test batch size               : 28
+Threshold                     : 86.8660
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.456844 / 0.066411
+AUROC                         : 1.99%
+Pixel-AUROC                   : 7.47%
+PRO                           : -0.00%
+AP-I                          : 0.0501
+AP-P                          : 0.0016
+F1 Score (image-level)        : 0.1726
+Confusion Matrix              : [[  7 393]
+ [  0  41]]
+Dice coefficient              : 0.0027
+IoU                           : 0.0014
+Precision (pixel-level)       : 0.0014
+Recall (pixel-level)          : 0.4223
+Pixel-level F1                : 0.0027
+PRO@0.05                      : -0.00%
+Total inference time (s)      : 139.62
+FPS                           : 3.16
+Average latency (ms/sample)   : 316.59
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 06:13:40
+Category                      : one
+Parameter w (mean/min/max)    : 2.1379 / 1.5000 / 3.2481
+Parameter v                   : 6
+Load checkpoint               : 10
+DA checkpoint                 : 1
+Test batch size               : 8
+Threshold                     : 93.4401
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.446822 / 0.087420
+AUROC                         : 69.58%
+Pixel-AUROC                   : 62.67%
+PRO                           : 34.36%
+AP-I                          : 0.8733
+AP-P                          : 0.1740
+F1 Score (image-level)        : 0.6197
+Confusion Matrix              : [[21  0]
+ [27 22]]
+Dice coefficient              : 0.1304
+IoU                           : 0.0698
+Precision (pixel-level)       : 0.0854
+Recall (pixel-level)          : 0.2757
+Pixel-level F1                : 0.1304
+PRO@0.05                      : 34.36%
+Total inference time (s)      : 72.12
+FPS                           : 0.97
+Average latency (ms/sample)   : 1030.24
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 06:32:34
+Category                      : one
+Parameter w (mean/min/max)    : 2.1379 / 1.5000 / 3.2481
+Parameter v                   : 6
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 82.7895
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.446822 / 0.087420
+AUROC                         : 63.65%
+Pixel-AUROC                   : 75.35%
+PRO                           : 40.82%
+AP-I                          : 0.8731
+AP-P                          : 0.4420
+F1 Score (image-level)        : 0.7595
+Confusion Matrix              : [[21  0]
+ [19 30]]
+Dice coefficient              : 0.4630
+IoU                           : 0.3012
+Precision (pixel-level)       : 0.4645
+Recall (pixel-level)          : 0.4614
+Pixel-level F1                : 0.4630
+PRO@0.05                      : 40.82%
+Total inference time (s)      : 38.85
+FPS                           : 1.80
+Average latency (ms/sample)   : 554.95
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 06:34:07
+Category                      : one
+Parameter w (mean/min/max)    : 2.1379 / 1.5000 / 3.2481
+Parameter v                   : 9
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 84.1602
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.446822 / 0.087420
+AUROC                         : 92.32%
+Pixel-AUROC                   : 88.56%
+PRO                           : 49.10%
+AP-I                          : 0.9758
+AP-P                          : 0.4707
+F1 Score (image-level)        : 0.9462
+Confusion Matrix              : [[21  0]
+ [ 5 44]]
+Dice coefficient              : 0.2483
+IoU                           : 0.1417
+Precision (pixel-level)       : 0.1503
+Recall (pixel-level)          : 0.7121
+Pixel-level F1                : 0.2483
+PRO@0.05                      : 49.10%
+Total inference time (s)      : 23.22
+FPS                           : 3.02
+Average latency (ms/sample)   : 331.65
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 06:35:16
+Category                      : one
+Parameter w (mean/min/max)    : 2.1379 / 1.5000 / 3.2481
+Parameter v                   : 12
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 85.4901
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.446822 / 0.087420
+AUROC                         : 94.75%
+Pixel-AUROC                   : 91.61%
+PRO                           : 57.93%
+AP-I                          : 0.9830
+AP-P                          : 0.5354
+F1 Score (image-level)        : 0.9574
+Confusion Matrix              : [[21  0]
+ [ 4 45]]
+Dice coefficient              : 0.2840
+IoU                           : 0.1655
+Precision (pixel-level)       : 0.1758
+Recall (pixel-level)          : 0.7378
+Pixel-level F1                : 0.2840
+PRO@0.05                      : 57.93%
+Total inference time (s)      : 23.85
+FPS                           : 2.94
+Average latency (ms/sample)   : 340.71
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 06:37:05
+Category                      : one
+Parameter w (mean/min/max)    : 2.1379 / 1.5000 / 3.2481
+Parameter v                   : 12
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 86.4158
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.446822 / 0.087420
+AUROC                         : 95.72%
+Pixel-AUROC                   : 92.93%
+PRO                           : 61.26%
+AP-I                          : 0.9868
+AP-P                          : 0.5805
+F1 Score (image-level)        : 0.9574
+Confusion Matrix              : [[21  0]
+ [ 4 45]]
+Dice coefficient              : 0.3506
+IoU                           : 0.2126
+Precision (pixel-level)       : 0.2321
+Recall (pixel-level)          : 0.7164
+Pixel-level F1                : 0.3506
+PRO@0.05                      : 61.26%
+Total inference time (s)      : 24.79
+FPS                           : 2.82
+Average latency (ms/sample)   : 354.11
+------------------------------------------------------------
+
+Run at                        : 2025-07-27 06:38:05
+Category                      : one
+Parameter w (mean/min/max)    : 2.1379 / 1.5000 / 3.2481
+Parameter v                   : 12
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 86.0159
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.446822 / 0.087420
+AUROC                         : 95.82%
+Pixel-AUROC                   : 94.12%
+PRO                           : 66.44%
+AP-I                          : 0.9872
+AP-P                          : 0.6231
+F1 Score (image-level)        : 0.9684
+Confusion Matrix              : [[21  0]
+ [ 3 46]]
+Dice coefficient              : 0.3241
+IoU                           : 0.1934
+Precision (pixel-level)       : 0.2017
+Recall (pixel-level)          : 0.8240
+Pixel-level F1                : 0.3241
+PRO@0.05                      : 66.44%
+Total inference time (s)      : 23.41
+FPS                           : 2.99
+Average latency (ms/sample)   : 334.37
+------------------------------------------------------------
+
+Run at                        : 2025-07-28 13:39:34
+Category                      : two
+Parameter w (mean/min/max)    : 2.4279 / 1.5000 / 3.2684
+Parameter v                   : 8
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 27.8939
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.455339 / 0.089084
+AUROC                         : 56.60%
+Pixel-AUROC                   : 83.70%
+PRO                           : 30.22%
+AP-I                          : 0.9276
+AP-P                          : 0.2360
+F1 Score (image-level)        : 0.7296
+Confusion Matrix              : [[ 28   2]
+ [ 84 116]]
+Dice coefficient              : 0.2735
+IoU                           : 0.1584
+Precision (pixel-level)       : 0.1592
+Recall (pixel-level)          : 0.9672
+Pixel-level F1                : 0.2735
+PRO@0.05                      : 30.22%
+Total inference time (s)      : 129.69
+FPS                           : 1.77
+Average latency (ms/sample)   : 563.86
+------------------------------------------------------------
+
+Run at                        : 2025-07-28 13:42:54
+Category                      : two
+Parameter w (mean/min/max)    : 0.0861 / 0.0500 / 0.1500
+Parameter v                   : 8
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 30.7648
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.455339 / 0.089084
+AUROC                         : 70.87%
+Pixel-AUROC                   : 76.46%
+PRO                           : 25.83%
+AP-I                          : 0.9556
+AP-P                          : 0.1759
+F1 Score (image-level)        : 0.8324
+Confusion Matrix              : [[ 28   2]
+ [ 56 144]]
+Dice coefficient              : 0.2190
+IoU                           : 0.1230
+Precision (pixel-level)       : 0.1235
+Recall (pixel-level)          : 0.9658
+Pixel-level F1                : 0.2190
+PRO@0.05                      : 25.83%
+Total inference time (s)      : 75.95
+FPS                           : 3.03
+Average latency (ms/sample)   : 330.23
+------------------------------------------------------------
+
+Run at                        : 2025-07-28 13:45:53
+Category                      : two
+Parameter w (mean/min/max)    : 0.4065 / 0.2500 / 0.7500
+Parameter v                   : 5
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 29.4305
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.5
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.455339 / 0.089084
+AUROC                         : 69.83%
+Pixel-AUROC                   : 82.80%
+PRO                           : 28.09%
+AP-I                          : 0.9524
+AP-P                          : 0.2159
+F1 Score (image-level)        : 0.8324
+Confusion Matrix              : [[ 28   2]
+ [ 56 144]]
+Dice coefficient              : 0.2197
+IoU                           : 0.1234
+Precision (pixel-level)       : 0.1238
+Recall (pixel-level)          : 0.9752
+Pixel-level F1                : 0.2197
+PRO@0.05                      : 28.09%
+Total inference time (s)      : 74.20
+FPS                           : 3.10
+Average latency (ms/sample)   : 322.63
+------------------------------------------------------------
+
+Run at                        : 2025-07-28 13:49:07
+Category                      : two
+Parameter w (mean/min/max)    : 0.4987 / 0.4950 / 0.5050
+Parameter v                   : 5
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 28.0264
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.01
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.455339 / 0.089084
+AUROC                         : 69.73%
+Pixel-AUROC                   : 83.69%
+PRO                           : 28.07%
+AP-I                          : 0.9520
+AP-P                          : 0.2211
+F1 Score (image-level)        : 0.8324
+Confusion Matrix              : [[ 28   2]
+ [ 56 144]]
+Dice coefficient              : 0.2245
+IoU                           : 0.1265
+Precision (pixel-level)       : 0.1269
+Recall (pixel-level)          : 0.9760
+Pixel-level F1                : 0.2245
+PRO@0.05                      : 28.07%
+Total inference time (s)      : 71.67
+FPS                           : 3.21
+Average latency (ms/sample)   : 311.61
+------------------------------------------------------------
+
+Run at                        : 2025-07-28 13:52:52
+Category                      : two
+Parameter w (mean/min/max)    : 0.4987 / 0.4950 / 0.5050
+Parameter v                   : 5
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 27.7093
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.01
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.455339 / 0.089084
+AUROC                         : 69.43%
+Pixel-AUROC                   : 83.72%
+PRO                           : 29.16%
+AP-I                          : 0.9508
+AP-P                          : 0.2230
+F1 Score (image-level)        : 0.8324
+Confusion Matrix              : [[ 28   2]
+ [ 56 144]]
+Dice coefficient              : 0.2245
+IoU                           : 0.1264
+Precision (pixel-level)       : 0.1268
+Recall (pixel-level)          : 0.9761
+Pixel-level F1                : 0.2245
+PRO@0.05                      : 29.16%
+Total inference time (s)      : 75.59
+FPS                           : 3.04
+Average latency (ms/sample)   : 328.66
+------------------------------------------------------------
+
+Run at                        : 2025-07-28 13:57:53
+Category                      : two
+Parameter w (mean/min/max)    : 2.9918 / 2.9700 / 3.0300
+Parameter v                   : 5
+Load checkpoint               : 100
+DA checkpoint                 : 3
+Test batch size               : 28
+Threshold                     : 527.6494
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.01
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.455339 / 0.089084
+AUROC                         : 56.13%
+Pixel-AUROC                   : 83.96%
+PRO                           : 21.33%
+AP-I                          : 0.9256
+AP-P                          : 0.2508
+F1 Score (image-level)        : 0.7296
+Confusion Matrix              : [[ 28   2]
+ [ 84 116]]
+Dice coefficient              : 0.2737
+IoU                           : 0.1586
+Precision (pixel-level)       : 0.1594
+Recall (pixel-level)          : 0.9678
+Pixel-level F1                : 0.2737
+PRO@0.05                      : 21.33%
+Total inference time (s)      : 71.89
+FPS                           : 3.20
+Average latency (ms/sample)   : 312.55
+------------------------------------------------------------
+
+Run at                        : 2025-07-28 14:10:04
+Category                      : two
+Parameter w (mean/min/max)    : 2.9918 / 2.9700 / 3.0300
+Parameter v                   : 5
+Load checkpoint               : 100
+DA checkpoint                 : 1
+Test batch size               : 28
+Threshold                     : 527.0535
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.01
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.455339 / 0.089084
+AUROC                         : 56.13%
+Pixel-AUROC                   : 83.99%
+PRO                           : 21.34%
+AP-I                          : 0.9256
+AP-P                          : 0.2516
+F1 Score (image-level)        : 0.7296
+Confusion Matrix              : [[ 28   2]
+ [ 84 116]]
+Dice coefficient              : 0.2736
+IoU                           : 0.1585
+Precision (pixel-level)       : 0.1593
+Recall (pixel-level)          : 0.9680
+Pixel-level F1                : 0.2736
+PRO@0.05                      : 21.34%
+Total inference time (s)      : 370.48
+FPS                           : 0.62
+Average latency (ms/sample)   : 1610.80
+------------------------------------------------------------
+
+Run at                        : 2025-07-28 14:12:46
+Category                      : two
+Parameter w (mean/min/max)    : 0.9973 / 0.9900 / 1.0100
+Parameter v                   : 1
+Load checkpoint               : 100
+DA checkpoint                 : 1
+Test batch size               : 28
+Threshold                     : 550.9047
+Algorithm                     : lof
+USE_DYNAMIC_NOISE             : True
+USE_DYNAMIC_W_ADJUST          : True
+DYNAMIC_W_ALPHA               : 0.3
+W_MAX_DELTA_RATIO             : 0.01
+DYNAMIC_W_LOW/HIGH            : [0, 500]
+Baseline/Std                  : -0.455339 / 0.089084
+AUROC                         : 56.13%
+Pixel-AUROC                   : 83.89%
+PRO                           : 19.88%
+AP-I                          : 0.9256
+AP-P                          : 0.2394
+F1 Score (image-level)        : 0.7296
+Confusion Matrix              : [[ 28   2]
+ [ 84 116]]
+Dice coefficient              : 0.2726
+IoU                           : 0.1578
+Precision (pixel-level)       : 0.1586
+Recall (pixel-level)          : 0.9705
+Pixel-level F1                : 0.2726
+PRO@0.05                      : 19.88%
+Total inference time (s)      : 73.51
+FPS                           : 3.13
+Average latency (ms/sample)   : 319.59
+------------------------------------------------------------

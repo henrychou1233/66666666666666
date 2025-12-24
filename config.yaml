@@ -1,0 +1,44 @@
+data:
+  name: MVTec  #MVTec #MTD #VisA 
+  data_dir: /mnt/d/1128/dataset/nba  # MVTec / VisA / MTD
+  category: 01Gorilla # ['carpet', 'bottle', 'hazelnut', ...]
+  image_size: 256
+  batch_size: 2
+  DA_batch_size: 1
+  test_batch_size: 28
+  mask: True
+  input_channel: 3
+
+model:
+  DDADS: True
+  checkpoint_dir: /mnt/d/1128/checkpoints   # MTD / MVTec / VisA
+  checkpoint_name: weights
+  exp_name: default
+  feature_extractor: wide_resnet101_2
+  learning_rate: 3e-4
+  weight_decay: 0.05
+  epochs: 50
+  load_chp: 50
+  DA_epochs: 3
+  DA_chp: 3
+  v: 1
+  w_DA: 3
+  DLlambda: 0.01
+  trajectory_steps: 1000
+  test_trajectoy_steps: 250
+  test_trajectoy_steps_DA: 250
+  skip: 25
+  skip_DA: 25
+  eta: 1
+  beta_start: 0.0001
+  beta_end: 0.02
+  device: 'cuda'
+  save_model: True
+  num_workers: 1
+  seed: 42
+
+metrics:
+  auroc: True
+  pro: True
+  misclassifications: False
+  visualisation: False
