@@ -1,6 +1,6 @@
 data:
   name: MVTec  #MVTec #MTD #VisA 
-  data_dir: /mnt/d/1128/dataset/nba  # MVTec / VisA / MTD
+  data_dir: /kaggle/input/5555555555555555  # MVTec / VisA / MTD
   category: 01Gorilla # ['carpet', 'bottle', 'hazelnut', ...]
   image_size: 256
   batch_size: 2
@@ -11,7 +11,7 @@ data:
 
 model:
   DDADS: True
-  checkpoint_dir: /mnt/d/1128/checkpoints   # MTD / MVTec / VisA
+  checkpoint_dir: /kaggle/input/5555555555555555/checkpoints   # MTD / MVTec / VisA
   checkpoint_name: weights
   exp_name: default
   feature_extractor: wide_resnet101_2
